@@ -10,8 +10,5 @@ class Module(Component):
 
     def started(self, component):
         handler = EventHandler(self)
-        #handler.setLevel(logging.INFO)
-        #handler.setLevel(logging.ERROR)
-
         Log.get_logger().addHandler(handler)
 
