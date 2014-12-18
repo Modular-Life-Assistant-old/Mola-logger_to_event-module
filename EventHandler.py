@@ -4,6 +4,11 @@ from circuits import Event
 
 class log(Event):
     def __init__(self, **kwargs):
+
+        # crash core circuit: multiple values for keyword argument 'name'
+        kwargs['logger_name'] = kwargs['name']
+        del(kwargs['name'])
+
         super(log, self).__init__(**kwargs)
 
 
