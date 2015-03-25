@@ -9,12 +9,12 @@ class log(Event):
         kwargs['logger_name'] = kwargs['name']
         del(kwargs['name'])
 
-        super(log, self).__init__(**kwargs)
+        super().__init__(**kwargs)
 
 
 class EventHandler(logging.Handler):
     def __init__(self, circuits):
-        super(EventHandler, self).__init__()
+        super().__init__()
         self.circuits = circuits
 
     def emit(self, record):
